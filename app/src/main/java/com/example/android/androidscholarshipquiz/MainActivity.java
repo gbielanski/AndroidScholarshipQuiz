@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
 
     private String getQuestion1BAnswer() {
         if(!question_1B_answer_1.isChecked() &&
-           !question_1B_answer_2.isChecked() &&
+            question_1B_answer_2.isChecked() &&
             question_1B_answer_3.isChecked())
 
             return getString(R.string.correct_1B);
@@ -169,9 +169,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public int getQuestion1BScore() {
-        if( question_1B_answer_3.isChecked() &&
-           !question_1B_answer_1.isChecked() &&
-           !question_1B_answer_2.isChecked())
+        if(!question_1B_answer_1.isChecked() &&
+            question_1B_answer_2.isChecked() &&
+            question_1B_answer_3.isChecked())
             return 1;
         else
             return 0;
